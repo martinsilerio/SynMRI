@@ -13,10 +13,6 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
-}
-
 #' @export
 #' @useDynLib SynMRI add_
 add <- function(x, y) .Call(add_, x, y)
