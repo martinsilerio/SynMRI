@@ -1,7 +1,7 @@
 
 #' @export
 #' @useDynLib SynMRI fit_LSE_
-fit_LSE <- function(R, TE, TR){
+fit_model_SynMRI <- function(R, TE, TR){
 
   # Check format is correct
 

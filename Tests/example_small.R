@@ -48,7 +48,7 @@ TE <- TE_all[subset]
 TR <- TR_all[subset]
 
 # And here we fit parameters with LSE
-fit <- fit_LSE(R, TE, TR)
+fit <- fit_model_SynMRI(R, TE, TR)
 
 # Now we will use the fitted values to make predictions at the design parameter
 # values we have available
