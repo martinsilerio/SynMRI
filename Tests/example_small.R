@@ -50,12 +50,12 @@ TR <- TR_all[subset]
 # And here we fit parameters with LSE
 fit <- fit_LSE(R, TE, TR)
 
-#Now we will
+# Now we will use the fitted values to make predictions at the design parameter
+# values we have available
+# R_all_pred <- predict_synMRI(fit, TE_all, TR_all)
 
+# Now we compare the original images with the predictions using the Root Mean
+# square error
+RMSE <- compare
 
-#toy example
-# A <- list(array(1, dim = c(3,3,3)), array(2, dim = c(3,3,3)), array(3, dim = c(3,3,3)))
-# e <- c(1,2,3)
-# r <- c(0.1, 0.2, 0.3)
-# res <- fit_LSE(A, e, r)
 
