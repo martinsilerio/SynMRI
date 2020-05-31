@@ -4,3 +4,6 @@
 .Ruserdata
 SynMRI.Rproj
 ZHRTS1.nii
+*.o
+src/*.o
+src/*.so
