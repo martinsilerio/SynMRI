@@ -37,7 +37,7 @@ R_all <- lapply(index, function(i, data){return(data[n1_ini:n1_fin,n2_ini:n2_fin
 # TE in millisecons
 TE_all <- c(10, 15, 20, 10, 30, 40, 10, 40, 80, 10, 60, 100)
 # TR in seconds
-TR_all <- c(0.6, 0.6, 0.6, 1, 1, 1, 2, 2, 2, 3, 3, 3)
+TR_all <- c(600, 600, 600, 1000, 1000, 1000, 2000, 2000, 2000, 3000, 3000, 3000)
 
 # Here let's save the subset to be used
 # 1, 10 and 12 are the three images we focus on
@@ -52,10 +52,7 @@ fit <- fit_model_SynMRI(R, TE, TR)
 
 # Now we will use the fitted values to make predictions at the design parameter
 # values we have available
-# R_all_pred <- predict_synMRI(fit, TE_all, TR_all)
+R_all_pred <- predict_SynMRI(fit, TE_all, TR_all)
 
-# Now we compare the original images with the predictions using the Root Mean
-# square error
-RMSE <- compare
-
+# Each element of the list is a syntetic MRI
 

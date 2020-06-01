@@ -441,7 +441,7 @@ SEXP fit_LSE_(SEXP M_, SEXP n_, SEXP n1_, SEXP n2_, SEXP n3_, SEXP R_, SEXP TE_,
   u_W[1] = exp(-1/u_T1);
   u_W[2] = exp(-1/u_T2);
 
-  /* let's find first the LS estimates */
+  /* let's find the estimates */
 
   MAKE_VECTOR(params, 3);
   MAKE_VECTOR(W, 3);
@@ -452,9 +452,11 @@ SEXP fit_LSE_(SEXP M_, SEXP n_, SEXP n1_, SEXP n2_, SEXP n3_, SEXP R_, SEXP TE_,
     MAKE_VECTOR(W[i].intensity, n);
   }
 
+  printMessage("Before Fitting the model");
+
    findLeastSquaresEstimates(M, image, TE, TR, params, W);
 
-  printMessage("After LSE");
+  printMessage("After Fitting the model");
   /*makePause();*/
 
   SEXP params_;
